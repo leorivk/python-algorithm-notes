@@ -21,8 +21,17 @@ def quick_sort(data, start, end):
     quick_sort(data, start, right-1)
     quick_sort(data, right+1, end)
 
+def pythonic_quick_sort(data):
+    if len(data) <= 1:
+        return data
 
-quick_sort(data, 0, len(data)-1)
-print(data)
+    pivot = data[0]
+
+    left = [x for x in data[1:] if x <= pivot]
+    right = [x for x in data[1:] if x > pivot]
+
+    return quick_sort(left) + [pivot] + quick_sort(right)
+
+
 
         
