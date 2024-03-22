@@ -41,7 +41,7 @@ def improved_bubble_sort_1(data):
         if ex_cnt == 0:
             break
         
-def improved_bubble_sort_1(data):
+def improved_bubble_sort_2(data):
     '''
     루프마다 비교, 교환을 수행하다가 특정 원소 이후부터 교환이 이루어지지 않는다면
     해당 원소의 앞쪽에 있는 원소들은 이미 정렬이 되어 있다는 것을 의미한다.
@@ -57,6 +57,7 @@ def improved_bubble_sort_1(data):
             if data[i] < data[i-1]:
                 data[i], data[i-1] = data[i-1], data[i]
                 last = i
+        # 교환이 이루어지지 않으면 for문이 끝나도 k값이 갱신되지 않고 n-1이 되므로 루프 종료
         k = last
 
 def shaker_sort(data):
