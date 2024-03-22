@@ -41,7 +41,9 @@ class ChainedHash:
                 return False
             p = p.next
         
+        # 현재 가장 상위의 노드를 다음 노드로 지정
         temp = Node(key, value, self.table[hash])
+        # 가장 상위 노드로 추가
         self.table[hash] = temp
         return True
     
