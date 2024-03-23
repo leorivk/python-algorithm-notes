@@ -4,7 +4,7 @@ def heapify(arr, n, i):
     r = 2 * i + 2 # 오른쪽 자식 노드
     
     # 왼쪽 자식이 존재하고, 현재 가장 큰 값보다 큰 경우
-    if l < n and arr[r] > arr[largest]:
+    if l < n and arr[l] > arr[largest]:
         largest = l
     
     # 오른쪽 자식이 존재하고, 현재 가장 큰 값보다 큰 경우
