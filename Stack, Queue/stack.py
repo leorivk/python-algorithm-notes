@@ -29,14 +29,14 @@ class FixedStack:
     
     def push(self, value):
         if self.is_full():
-            return FixedStack.Full
+            raise FixedStack.Full
         
         self.stk[self.ptr] = value
         self.ptr += 1
     
     def pop(self):
         if self.is_empty():
-            return FixedStack.Empty
+            raise FixedStack.Empty
         
         self.ptr -= 1
         return self.stk[self.ptr] # pop된 요소 반환
@@ -44,7 +44,7 @@ class FixedStack:
     def peak(self):
         '''꼭대기 데이터를 들여다 봄'''
         if self.is_empty():
-            return FixedStack.Empty
+            raise FixedStack.Empty
         
         return self.stk[self.ptr - 1]
     
