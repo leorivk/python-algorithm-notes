@@ -76,11 +76,11 @@ def recursive_heapify(arr, i):
     왼쪽 자식 노드의 인덱스 : 홀수
     오른쪽 자식 노드의 인덱스 : 짝수
     '''
-    parent_idx = int((i-1) // 2) if int((i-1) // 2) > 0 else 0
+    parent = int((i-1) // 2) if int((i-1) // 2) > 0 else 0
     
-    if arr[parent_idx] < arr[i]: # 부모와 자기 자신 비교
-        print(f"INDEX {i} : {arr[i]}, INDEX {parent_idx} : {arr[parent_idx]} 스왑")
-        arr[i] , arr[parent_idx] = arr[parent_idx] , arr[i] # 자기 자신이 더 크면 스왑
+    if arr[parent] < arr[i]: # 부모와 자기 자신 비교
+        print(f"INDEX {i} : {arr[i]}, INDEX {parent} : {arr[parent]} 스왑")
+        arr[i] , arr[parent] = arr[parent] , arr[i] # 자기 자신이 더 크면 스왑
 
     
 arr = [2, 3, 4, 5, 7, 6]
