@@ -9,8 +9,10 @@ data = [1, 4, 3, 2, 7, 3]
 def selection_sort(data):
     n = len(data)
     for i in range(n-1): # 정렬할 부분 중 가장 작은 원소의 인덱스
+        min = i
         for j in range(i+1, n):
             if data[j] < data[min]:
                 min = j
         data[i], data[min] = data[min], data[i]
-        
+    
+    
