@@ -1,6 +1,3 @@
-import time
-import datetime
-
 def recursive_heapify(arr, i):
 
     l = 2 * i + 1
@@ -36,7 +33,6 @@ def test_recursive_heapify(arr, i):
         test_recursive_heapify(arr, i)
 
 arr = [3,4,6,1,9,2,8,7]
-
 
 test_recursive_heapify(arr, 0)
 

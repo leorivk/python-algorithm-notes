@@ -26,7 +26,7 @@ def heap_sort(arr):
     n = len(arr)
     
     # arr[i] ~ arr[n-1]을 힙으로 만들기
-    # 마지막 부모 노드부터 루트노드까지 루프
+    # 마지막 부모 노드부터 루트노드까지 루프 순환
     for i in range(n // 2 - 1, -1, -1):
         down_heap(arr, n, i)
     
