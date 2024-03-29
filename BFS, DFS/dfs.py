@@ -1,4 +1,15 @@
-graph = [
+graph_matrix = [
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 1, 1, 0, 0, 0, 0, 1],
+    [0, 1, 0, 0, 0, 0, 0, 1, 0],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+]
+graph_list = [
     [],
     [2, 3, 8],
     [1, 7],
@@ -31,3 +42,10 @@ def dfs_stack(graph, current, visited):
                 visited[i] = True
 
     
+def dfs_matrix(graph, v, visited):
+    visited[v] = True
+    for i in range(len(graph[v])):
+        if graph[v][i] == 1 and not visited[i]:
+            dfs_matrix(graph, i, visited)
+
+dfs_matrix(graph_matrix, 0, visited)
