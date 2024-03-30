@@ -21,8 +21,6 @@ graph_list = [
     [1, 7]
 ]
 
-visited = [False] * len(graph)
-
 def dfs_recursive(graph, current, visited):
     visited[current] = True
     for i in graph[current]:
@@ -48,4 +46,3 @@ def dfs_matrix(graph, v, visited):
         if graph[v][i] == 1 and not visited[i]:
             dfs_matrix(graph, i, visited)
 
-dfs_matrix(graph_matrix, 0, visited)
