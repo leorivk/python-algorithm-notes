@@ -8,6 +8,7 @@ m = 14   # 이동 경우의 수
 
 INF = float("inf")
 table = [[INF] * n for _ in range(n)]
+# 이동 경로 기록
 nxt = [[0] * n for _ in range(n)]
 
 for i in range(n):

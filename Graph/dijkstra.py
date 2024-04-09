@@ -34,6 +34,7 @@ def dijkstra_naive(start, adj, n):
     
     return table
 
+
 def dijkstra(start, adj, n):
     global INF
     pq = []
